@@ -1,263 +1,288 @@
 <?xml version="1.0" encoding="utf-8"?>
 <elements>
+  <!-- ============================= -->
+  <!--  INFO / UPDATE (required)    -->
+  <!-- ============================= -->
   <info>
     <name>Artificer — Arcane Sniper (MLG)</name>
+    <description>Artificer Specialist focused on infused firearms and Arcane Shots. XML rebuilt to use Aurora’s “supports + select” pattern like Fighter’s Maneuvers.</description>
     <author url="https://github.com/Barumars/MLG-HB-Aurora">Barumars</author>
-    <update version="1.0">
-      <file name="artificer-arcane-sniper.xml"
-            url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/main/Elements/Classes/artificer-arcane-sniper.xml"/>
+    <update version="1.1.0" date="2025-08-17">
+      <!-- change this URL to your own repository raw link if needed -->
+      <file name="artificer-arcane-sniper.xml" url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/main/Elements/Classes/artificer-arcane-sniper.xml"/>
     </update>
   </info>
+
   <!-- ============================= -->
   <!--  SUBCLASS (ARCHETYPE)        -->
   <!-- ============================= -->
-  <element name="Arcane Sniper" type="Archetype" source="Homebrew" id="ID_HB_ARTIFICER_SPECIALIST_ARCANE_SNIPER">
+  <element name="Arcane Sniper" type="Archetype" source="Homebrew" id="ID_MLG_HB_ARTIFICER_SPECIALIST_ARCANE_SNIPER">
     <supports>Artificer Specialist</supports>
     <description>
-      <p>The Arcane Sniper is an Artificer specialization that combines firearms with magical flow. At early levels, you create your Arcane Rifle, gain Flow points for Arcane Shots at 3rd level, and acquire tools like mechanical repairs and sniper nests. At higher levels you enhance your rifle, gain advanced sight and repair capabilities, create a mechanical companion at 15th level, and gain reaction shots against enemies in your range at 18th level.</p>
+      <p>The Arcane Sniper blends engineering with battlefield control. You craft an Arcane Rifle, channel <em>Flow</em> to fuel special shots, and keep your weapon in perfect order. This file mirrors Aurora’s Battle Master maneuver structure so Arcane Shots are picked and shown consistently.</p>
+      <div element="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ARCANE_RIFLE"/>
+      <div element="ID_MLG_HB_ARCANE_SNIPER_FEATURE_FLOW"/>
+      <div element="ID_MLG_HB_ARCANE_SNIPER_FEATURE_GUNSMITH"/>
+      <div element="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ARCANE_SHOTS"/>
+      <div element="ID_MLG_HB_ARCANE_SNIPER_FEATURE_RENDING_SHOTS"/>
+      <div element="ID_MLG_HB_ARCANE_SNIPER_FEATURE_SNIPER_NEST"/>
+      <div element="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ADVANCED_RIFLE"/>
+      <div element="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ADVANCED_VISION"/>
+      <div element="ID_MLG_HB_ARCANE_SNIPER_FEATURE_SUPPRESSING_FIRE"/>
+      <div element="ID_MLG_HB_ARCANE_SNIPER_FEATURE_IMPROVED_RIFLE"/>
+      <div element="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ELEMENTAL_OVERFLOW"/>
+      <div element="ID_MLG_HB_ARCANE_SNIPER_FEATURE_HEADSHOT"/>
     </description>
+    <sheet>
+      <description>Magitech marksmanship with Arcane Shots powered by Flow.</description>
+    </sheet>
     <rules>
-      <!-- 1st -->
-      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_ARCANE_RIFLE" level="1"/>
+      <!-- Subclasses are chosen at Artificer 3 -->
+      <grant type="Archetype Feature" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ARCANE_RIFLE" level="3"/>
+      <grant type="Archetype Feature" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_FLOW" level="3"/>
+      <grant type="Archetype Feature" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_GUNSMITH" level="3"/>
+      <grant type="Archetype Feature" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ARCANE_SHOTS" level="3"/>
+      <grant type="Archetype Feature" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_RENDING_SHOTS" level="3"/>
+      <grant type="Archetype Feature" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_SNIPER_NEST" level="3"/>
 
-      <!-- 3rd -->
-      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_FIREARM_PROFICIENCY" level="3"/>
-      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_GUNSMITH" level="3"/>
-      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_FLOW" level="3"/>
-      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_RENDING_SHOTS" level="3"/>
-      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_SNIPER_NEST" level="3"/>
-      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_ARCANE_SHOTS" level="3"/>
+      <grant type="Archetype Feature" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ADVANCED_RIFLE" level="5"/>
+      <grant type="Archetype Feature" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ADVANCED_VISION" level="7"/>
+      <grant type="Archetype Feature" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_SUPPRESSING_FIRE" level="9"/>
+      <grant type="Archetype Feature" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_IMPROVED_RIFLE" level="11"/>
+      <grant type="Archetype Feature" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ELEMENTAL_OVERFLOW" level="15"/>
+      <grant type="Archetype Feature" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_HEADSHOT" level="18"/>
 
-      <!-- Arcane Shot selections -->
+      <!-- Arcane Shot choices (works like Battle Master Maneuvers) -->
       <select type="Archetype Feature" name="Arcane Shot (Arcane Sniper)" supports="Arcane Shot (Arcane Sniper)" level="3" number="2"/>
-      <select type="Archetype Feature" name="Arcane Shot (Arcane Sniper)" supports="Arcane Shot (Arcane Sniper)" level="7" number="1"/>
-      <select type="Archetype Feature" name="Arcane Shot (Arcane Sniper)" supports="Arcane Shot (Arcane Sniper)" level="10" number="1"/>
+      <select type="Archetype Feature" name="Arcane Shot (Arcane Sniper)" supports="Arcane Shot (Arcane Sniper)" level="6" number="1"/>
+      <select type="Archetype Feature" name="Arcane Shot (Arcane Sniper)" supports="Arcane Shot (Arcane Sniper)" level="11" number="1"/>
       <select type="Archetype Feature" name="Arcane Shot (Arcane Sniper)" supports="Arcane Shot (Arcane Sniper)" level="15" number="1"/>
-      <select type="Archetype Feature" name="Arcane Shot (Arcane Sniper)" supports="Arcane Shot (Arcane Sniper)" level="18" number="1"/>
-
-      <!-- 5th -->
-      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_ADVANCED_RIFLE" level="5"/>
-
-      <!-- 7th -->
-      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_ADVANCED_VISION" level="7"/>
-
-      <!-- 10th -->
-      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_ARCANE_REPAIR" level="10"/>
-
-      <!-- 15th -->
-      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_MECHANICAL_FRIEND" level="15"/>
-
-      <!-- 18th -->
-      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_BYRONNAS_SPECIAL_SERVICE" level="18"/>
     </rules>
   </element>
 
   <!-- ============================= -->
-  <!--  FEATURES                    -->
+  <!--  CORE FEATURES                -->
   <!-- ============================= -->
 
-  <!-- L1: Arcane Rifle -->
-  <element name="Arcane Rifle" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_ARCANE_RIFLE">
+  <element name="Arcane Rifle" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ARCANE_RIFLE">
     <description>
-      <p>At 1st level, you create your Arcane Rifle. This magical weapon can serve as a spellcasting focus.</p>
+      <p>You craft an <em>Arcane Rifle</em>, a finely tuned firearm integrated with your infusions. It counts as a firearm for all features in this subclass and as a spellcasting focus for your artificer spells.</p>
+      <p class="indent"><strong>Infused Engineering.</strong> While you are holding your Arcane Rifle, you can ignore the <em>Loading</em> property of firearms you wield and may use Intelligence instead of Dexterity for firearm attack and damage rolls.</p>
     </description>
     <sheet>
-      <description>You own an Arcane Rifle (magical, spellcasting focus). Added to inventory.</description>
+      <description>Your firearm doubles as a spellcasting focus; ignore Loading; you can use INT for firearm attacks &amp; damage while wielding your Arcane Rifle.</description>
+    </sheet>
+  </element>
+
+  <element name="Flow" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_FLOW">
+    <description>
+      <p>You harness a personal reservoir of power called <em>Flow</em>. You have a number of Flow points equal to your Intelligence modifier (minimum 1). You regain all expended Flow when you finish a long rest.</p>
+      <p class="indent"><strong>Fuel for Shots.</strong> When you hit a creature with a firearm attack, you can expend 1 Flow to apply one of your Arcane Shot options to that hit (saving throws DC = 8 + your proficiency bonus + your Intelligence modifier).</p>
+      <p class="indent"><strong>Spell Slot Exchange.</strong> As a bonus action, you can convert a spell slot to Flow equal to the slot’s level (temporary Flow that vanishes on a long rest).</p>
+    </description>
+    <sheet>
+      <description>Flow: INT mod (min 1), long-rest. Spend 1 Flow on hit to apply an Arcane Shot (Save DC {{arcane-shot:dc}}). Bonus action: convert a spell slot to Flow equal to slot level.</description>
     </sheet>
     <rules>
-      <grant type="Weapon" id="ID_HB_WEAPON_ARCANE_RIFLE"/>
+      <stat name="arcane-shot:dc" value="8" bonus="base"/>
+      <stat name="arcane-shot:dc" value="proficiency"/>
+      <stat name="arcane-shot:dc" value="intelligence:modifier"/>
     </rules>
   </element>
 
-  <!-- L3: Firearm Proficiency -->
-  <element name="Firearm Proficiency" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_FIREARM_PROFICIENCY">
+  <element name="Gunsmith" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_GUNSMITH">
     <description>
-      <p>You gain proficiency with firearms.</p>
-    </description>
-    <sheet>
-      <description>Proficiency with firearms</description>
-    </sheet>
-    <rules>
-      <grant type="Proficiency" id="ID_CRIT_PROFICIENCY_WEAPON_FIREARMS"/>
-    </rules>
-  </element>
-
-  <!-- L3: Gunsmith -->
-  <element name="Gunsmith" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_GUNSMITH">
-    <description>
-      <ul>
-        <li>Gain proficiency with Tinker's tools</li>
-        <li>Can produce ammunition and repair damaged weapons (may design new weapons at DM's discretion)</li>
-        <li>Action: <i>Repair Misfire</i> (DC = 8 + weapon's misfire value)</li>
-      </ul>
+      <p>You gain proficiency with firearms if you don’t already have it. As an action, you can repair a firearm you’re holding, clearing a misfire or jam if you expend 1 Flow or 10 minutes of tinkering.</p>
     </description>
     <sheet action="Action">
-      <description>Tinker's tools; Repair Misfire (DC 8 + misfire)</description>
+      <description>Repair firearm/misfire (spend 1 Flow or 10 min).</description>
     </sheet>
-    <rules>
-      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_TINKERS_TOOLS"/>
-    </rules>
   </element>
 
-  <!-- L3: Flow (resource) -->
-  <element name="Flow" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_FLOW">
+  <element name="Arcane Shots" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ARCANE_SHOTS">
     <description>
-      <p>Gain Flow points to fuel Arcane Shot maneuvers. As a bonus action, expend spell slots to gain temporary Flow points (equal to slot level). Lose all temporary Flow after a long rest.</p>
-      <p>Flow points equal to your Intelligence modifier (minimum 1).</p>
-    </description>
-    <sheet usage="{{flow:count}}/Long Rest" action="Bonus Action">
-      <description>Flow Point Exchange: Expend spell slot → gain temporary Flow equal to slot level (resets at LR)</description>
-    </sheet>
-    <rules>
-      <stat name="flow:count" value="1"/>
-      <stat name="flow:count" value="intelligence:modifier"/>
-    </rules>
-  </element>
-
-  <!-- L3: Rending Shots -->
-  <element name="Rending Shots" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_RENDING_SHOTS">
-    <description>
-      <p>Your ranged attacks ignore piercing damage resistance. Immunity to piercing damage counts as resistance against your attacks.</p>
+      <p>At 3rd level, you learn special shot options powered by Flow. You learn two Arcane Shots now, and learn one additional option at 6th, 11th, and 15th level. You can apply only one Arcane Shot per attack.</p>
     </description>
     <sheet>
-      <description>Ranged attacks ignore piercing resistance; immunity → resistance</description>
+      <description>Known shots: choose 2 (then +1 at 6/11/15). Spend 1 Flow on a hit to apply one shot.</description>
     </sheet>
   </element>
 
-  <!-- L3: Sniper Nest -->
-  <element name="Sniper Nest" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_SNIPER_NEST">
+  <element name="Rending Shots" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_RENDING_SHOTS">
     <description>
-      <p>Spend 10 minutes creating a temporary sniper nest. While in the nest, you gain 3/4 cover. If hidden, enemies have disadvantage to detect you after you attack targets within 30 ft.</p>
-    </description>
-    <sheet action="Bonus Action">
-      <description>Set Up the Nest (10 min): Gain 3/4 cover; hard to detect when hidden</description>
-    </sheet>
-  </element>
-
-  <!-- L3: Arcane Shots (container text) -->
-  <element name="Arcane Shots" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_ARCANE_SHOTS">
-    <description>
-      <p>Arcane Shots are special maneuvers declared before an attack that may consume Flow points. Only one Arcane Shot per attack. Saving throw DC (if applicable): 8 + Proficiency Bonus + Intelligence modifier.</p>
-      <p>Learn additional Arcane Shot options as you level up. When you gain a new option, you may replace one known option.</p>
+      <p>Your shots tear at arcane seams. Once per turn when you expend Flow on a firearm attack, you can add extra damage equal to your Intelligence modifier.</p>
     </description>
     <sheet>
-      <description>Arcane Shot: Once per attack; DC = 8 + PB + INT mod</description>
+      <description>Once/turn when you spend Flow on a shot, add INT mod damage.</description>
     </sheet>
   </element>
 
-  <!-- L5: Advanced Rifle -->
-  <element name="Advanced Rifle" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_ADVANCED_RIFLE">
+  <element name="Sniper Nest" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_SNIPER_NEST">
     <description>
-      <p>At 5th level, you upgrade your Arcane Rifle. The basic rifle is replaced with an Advanced Arcane Rifle.</p>
+      <p>You can quickly establish a vantage point. During a 1-minute setup you create a light cover nest; while in it you have advantage on Perception checks relying on sight and +1 to firearm attack rolls until you move.</p>
     </description>
     <sheet>
-      <description>Arcane Rifle → Advanced Arcane Rifle (2d12; misfire 1; focus)</description>
+      <description>1-minute setup: gain light cover vantage; +1 firearm attacks; adv. on Perception (sight) until you move.</description>
     </sheet>
-    <rules>
-      <grant type="Weapon" id="ID_HB_WEAPON_ADVANCED_ARCANE_RIFLE"/>
-    </rules>
   </element>
 
-  <!-- L7: Advanced Vision -->
-  <element name="Advanced Vision" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_ADVANCED_VISION">
+  <element name="Advanced Rifle" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ADVANCED_RIFLE">
     <description>
-      <p>Starting at 7th level, you ignore disadvantage on Wisdom (Perception) checks based on sight (unless blinded). You also gain advantage on saving throws against blindness.</p>
+      <p>At 5th level your rifle’s mechanisms improve. Your firearm attacks ignore half cover, and the misfire threshold of firearms you wield is reduced by 1 (minimum 1).</p>
     </description>
     <sheet>
-      <description>Ignore sight-based Perception disadvantage; advantage against blindness saves</description>
+      <description>Ignore half cover; reduce misfire threshold by 1 (min 1).</description>
     </sheet>
   </element>
 
-  <!-- L10: Arcane Repair -->
-  <element name="Arcane Repair" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_ARCANE_REPAIR">
+  <element name="Advanced Vision" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ADVANCED_VISION">
     <description>
-      <p>As a bonus action, spend 1 Flow point to clear the misfire condition from a firearm that isn't broken.</p>
-    </description>
-    <sheet action="Bonus Action">
-      <description>1 Flow: Clear misfire condition (if not broken)</description>
-    </sheet>
-  </element>
-
-  <!-- L15: Mechanical Friend -->
-  <element name="Mechanical Friend" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_MECHANICAL_FRIEND">
-    <description>
-      <p>Create a mechanical companion (similar to a familiar) that accompanies you. It understands Common and one other language you know, and has truesight. You gain advantage on ranged weapon attacks against creatures targeted by your mechanical friend.</p>
+      <p>At 7th level you craft enhanced optics. You gain darkvision to 60 ft. (or +60 ft. if you already have it) and you have advantage on Perception checks made to spot creatures at long range with your firearm.</p>
     </description>
     <sheet>
-      <description>Mechanical companion (familiar-like, truesight). Advantage on attacks against its target</description>
+      <description>Darkvision 60 ft. (or +60 ft.). Adv. on long-range Perception checks with your firearm.</description>
     </sheet>
   </element>
 
-  <!-- L18: Byronna's Special Service -->
-  <element name="Byronna's Special Service" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_BYRONNAS_SPECIAL_SERVICE">
+  <element name="Suppressing Fire" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_SUPPRESSING_FIRE">
     <description>
-      <p>When an enemy you can see enters or moves within your normal weapon range, you can use your reaction to make an opportunity attack with a ranged weapon.</p>
+      <p>At 9th level, when you hit a creature with a firearm attack, you can force it to make a Wisdom save (DC as your Arcane Shot). On a failure the target’s speed is 0 until the start of your next turn. You can apply this without extra Flow once per turn.</p>
+    </description>
+    <sheet>
+      <description>On a hit: WIS save (DC {{arcane-shot:dc}}) or speed 0 until your next turn; once/turn free.</description>
+    </sheet>
+  </element>
+
+  <element name="Improved Rifle" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_IMPROVED_RIFLE">
+    <description>
+      <p>At 11th level, your firearm’s damage increases by 1 die size (e.g. 1d8→1d10, 1d10→1d12). In addition, your firearm attacks ignore three-quarters cover.</p>
+    </description>
+    <sheet>
+      <description>+1 die size to firearm damage; ignore ¾ cover.</description>
+    </sheet>
+  </element>
+
+  <element name="Elemental Overflow" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ELEMENTAL_OVERFLOW">
+    <description>
+      <p>At 15th level, when you spend Flow on a shot, you also deal an extra 1d6 force damage to the target.</p>
+    </description>
+    <sheet>
+      <description>When you spend Flow on a shot: +1d6 force damage.</description>
+    </sheet>
+  </element>
+
+  <element name="Headshot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_HEADSHOT">
+    <description>
+      <p>At 18th level, when a creature you can see within your firearm’s normal range makes an attack, you can use your reaction to make a single firearm attack against it. On a hit, the creature’s attack has disadvantage and the target takes extra damage equal to your proficiency bonus.</p>
     </description>
     <sheet action="Reaction">
-      <description>Opportunity attack against enemies entering normal range (ranged weapon)</description>
+      <description>Reaction: make a firearm attack vs attacker in normal range; on hit, their attack has disadvantage and takes +PB damage.</description>
     </sheet>
   </element>
 
   <!-- ============================= -->
-  <!--  ARCANE SHOT OPTIONS         -->
+  <!--  ARCANE SHOT OPTIONS (ALL)   -->
+  <!--  Works like Fighter Maneuvers -->
   <!-- ============================= -->
 
-  <element name="Arcane Shot: Overcharged Shot" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_AS_OVERCHARGED_SHOT">
+  <element name="Anti-Magic Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_ANTIMAGIC">
     <supports>Arcane Shot (Arcane Sniper)</supports>
     <description>
-      <p>Declare this shot before a firearm attack. Expend 1-3 Flow points. For each point spent, add +1 weapon damage die to the attack. Each point spent increases the weapon's misfire value by +2 for this attack.</p>
+      <p>Spend 1 Flow on a hit. Target must succeed on a Constitution save (DC {{arcane-shot:dc}}) or it can’t cast spells until the end of its next turn. On a success, concentration checks from this hit are made with disadvantage only.</p>
     </description>
     <sheet>
-      <description>1–3 Flow: +1 weapon die/point; misfire +2/point for this attack</description>
+      <description>On hit spend 1 Flow: CON save or can’t cast spells until end of its next turn (success: conc. checks at disadv.).</description>
     </sheet>
   </element>
 
-  <element name="Arcane Shot: Regenerating Shot" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_AS_REGENERATING_SHOT">
+  <element name="Armor-Piercing Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_ARMOR_PIERCING">
     <supports>Arcane Shot (Arcane Sniper)</supports>
     <description>
-      <p>Expend 2 Flow points to heal a creature you hit or target for 2d8 + INT modifier.</p>
+      <p>Spend 1 Flow on a hit to ignore the target’s resistances to the attack’s damage type, and treat the target’s AC as if it were 2 lower for this hit.</p>
     </description>
     <sheet>
-      <description>2 Flow: Heal 2d8 + INT modifier</description>
+      <description>Spend 1 Flow: ignore resistances; treat AC as 2 lower for this hit.</description>
     </sheet>
   </element>
 
-  <!-- ============================= -->
-  <!--  WEAPONS                     -->
-  <!-- ============================= -->
-
-  <element name="Arcane Rifle" type="Weapon" source="Homebrew" id="ID_HB_WEAPON_ARCANE_RIFLE">
-    <supports>ID_INTERNAL_WEAPON_CATEGORY_FIREARM,ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED,ID_INTERNAL_WEAPON_PROPERTY_RANGED,ID_INTERNAL_DAMAGETYPE_PIERCING,ID_INTERNAL_WEAPON_PROPERTY_AMMUNITION,ID_INTERNAL_WEAPON_PROPERTY_TWOHANDED,ID_INTERNAL_WEAPON_PROPERTY_MISFIRE,ID_RDDT_AA_WEAPON_GROUP_FIREARMS</supports>
+  <element name="Crippling Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_CRIPPLING">
+    <supports>Arcane Shot (Arcane Sniper)</supports>
     <description>
-      <p>Ammunition (range 30/350), Two-Handed, Misfire 2, Magical, Spellcasting Focus</p>
+      <p>Spend 1 Flow on a hit. The target makes a Constitution save or suffers disadvantage on Strength and Dexterity checks and its speed is reduced by 10 ft. until the end of its next turn.</p>
     </description>
-    <setters>
-      <set name="category">Arcane Firearms</set>
-      <set name="cost" currency="gp">—</set>
-      <set name="weight" lb="25">25 lb.</set>
-      <set name="slot">twohand</set>
-      <set name="range">30/350</set>
-      <set name="damage" type="piercing">1d12</set>
-      <set name="misfire">2</set>
-      <set name="proficiency">ID_INTERNAL_PROFICIENCY_WEAPON_CATEGORY_FIREARM</set>
-    </setters>
+    <sheet>
+      <description>Spend 1 Flow on hit: CON save or –10 ft. speed and disadv. on STR/DEX checks until end of its next turn.</description>
+    </sheet>
   </element>
 
-  <element name="Advanced Arcane Rifle" type="Weapon" source="Homebrew" id="ID_HB_WEAPON_ADVANCED_ARCANE_RIFLE">
-    <supports>ID_INTERNAL_WEAPON_CATEGORY_FIREARM,ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED,ID_INTERNAL_WEAPON_PROPERTY_RANGED,ID_INTERNAL_DAMAGETYPE_PIERCING,ID_INTERNAL_WEAPON_PROPERTY_AMMUNITION,ID_INTERNAL_WEAPON_PROPERTY_TWOHANDED,ID_INTERNAL_WEAPON_PROPERTY_MISFIRE,ID_RDDT_AA_WEAPON_GROUP_FIREARMS</supports>
+  <element name="Disabling Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_DISABLING">
+    <supports>Arcane Shot (Arcane Sniper)</supports>
     <description>
-      <p>Ammunition (range 15/400–450), Two-Handed, Misfire 1, Magical, Spellcasting Focus</p>
+      <p>Spend 1 Flow on a hit. The target makes a Wisdom save or it can’t take reactions and has disadvantage on opportunity attacks until the end of its next turn.</p>
     </description>
-    <setters>
-      <set name="category">Arcane Firearms</set>
-      <set name="cost" currency="gp">—</set>
-      <set name="weight" lb="25">25 lb.</set>
-      <set name="slot">twohand</set>
-      <set name="range">15/400</set>
-      <set name="damage" type="piercing">2d12</set>
-      <set name="misfire">1</set>
-      <set name="proficiency">ID_INTERNAL_PROFICIENCY_WEAPON_CATEGORY_FIREARM</set>
-    </setters>
+    <sheet>
+      <description>Spend 1 Flow: WIS save or no reactions and disadv. on opportunity attacks until end of its next turn.</description>
+    </sheet>
+  </element>
+
+  <element name="Exploding Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_EXPLODING">
+    <supports>Arcane Shot (Arcane Sniper)</supports>
+    <description>
+      <p>Spend 1 Flow on a hit to cause a 10-ft. explosion. The target and each creature within 10 ft. must make a Dexterity save, taking 2d6 fire damage on a failed save, or half as much on a success.</p>
+    </description>
+    <sheet>
+      <description>Spend 1 Flow: 10-ft. burst, DEX save; 2d6 fire (half on success) incl. target.</description>
+    </sheet>
+  </element>
+
+  <element name="Flare Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_FLARE">
+    <supports>Arcane Shot (Arcane Sniper)</supports>
+    <description>
+      <p>Spend 1 Flow on a hit. The target emits bright light in a 10-ft. radius and dim light 10 ft. beyond and can’t benefit from being invisible until the end of your next turn.</p>
+    </description>
+    <sheet>
+      <description>Spend 1 Flow: target sheds light (10/10) and can’t benefit from invisibility until your next turn ends.</description>
+    </sheet>
+  </element>
+
+  <element name="Heat Metal Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_HEAT_METAL">
+    <supports>Arcane Shot (Arcane Sniper)</supports>
+    <description>
+      <p>Spend 1 Flow on a hit against a creature wearing or holding metal. It takes an extra 2d6 fire damage and must succeed on a Constitution save or drop one held metal item (GM discretion) if possible.</p>
+    </description>
+    <sheet>
+      <description>Spend 1 Flow: +2d6 fire; CON save or drop a held metal item (if possible).</description>
+    </sheet>
+  </element>
+
+  <element name="Kill Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_KILL">
+    <supports>Arcane Shot (Arcane Sniper)</supports>
+    <description>
+      <p>Spend 1 Flow on a hit to turn the attack into a critical hit against creatures that are frightened or paralyzed. Otherwise, add an extra 1d6 damage of the attack’s type.</p>
+    </description>
+    <sheet>
+      <description>Spend 1 Flow: if target is frightened/paralyzed, treat as crit; else +1d6 damage of the attack’s type.</description>
+    </sheet>
+  </element>
+
+  <element name="Overcharged Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_OVERCHARGED">
+    <supports>Arcane Shot (Arcane Sniper)</supports>
+    <description>
+      <p>Spend 1 Flow before rolling to gain advantage on the attack. If both dice would hit, add +1d6 force damage.</p>
+    </description>
+    <sheet>
+      <description>Spend 1 Flow before the roll: gain advantage; if both dice hit, +1d6 force.</description>
+    </sheet>
+  </element>
+
+  <element name="Regenerating Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_REGENERATING">
+    <supports>Arcane Shot (Arcane Sniper)</supports>
+    <description>
+      <p>Spend 1 Flow on a hit. You or an ally within 30 ft. gains temporary hit points equal to your Intelligence modifier + your proficiency bonus.</p>
+    </description>
+    <sheet>
+      <description>Spend 1 Flow: temp HP to you/ally within 30 ft. = INT mod + PB.</description>
+    </sheet>
   </element>
 
 </elements>
