@@ -5,14 +5,13 @@
     <description>Classes and subclasses source entry for Aurora Builder.</description>
     <author url="https://github.com/Barumars/MLG-HB-Aurora">Barumars</author>
 
-    <!-- Sürüm bilgisi -->
-    <update version="1.0.2" date="2025-08-17">
-      <!-- KENDİ index dosyamı işaret eder; Aurora kendi kendine güncellemeyi buradan takip eder -->
-      <file name="classes.index"
-            url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/main/classes.index" />
+<!-- Index dosyasının kendi güncelleme bildirimi -->
+    <update version="1.0.3" date="2025-08-17">
+      <file name="Elements/Classes/artificer-arcane-sniper.xml"
+            url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/main/Elements/Classes/artificer-arcane-sniper.xml" />
     </update>
   </info>
-
+  
   <files>
     <!-- Kaynak tanımı: sources.xml (adı ve yolunu aynen koru) -->
     <file name="source-homebrew.xml"
