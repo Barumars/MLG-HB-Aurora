@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <index>
   <info>
-    <name>MLG Homebrew (Root)</name>
-    <update version="1.0" />
+    <name>MLG Homebrew — Root</name>
+    <author url="https://github.com/Barumars/MLG-HB-Aurora">Barumars</author>
+    <update version="1.0">
+      <file
+        name="index.xml"
+        url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/main/index.xml" />
+    </update>
   </info>
 
   <files>
