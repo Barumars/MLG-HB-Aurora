@@ -299,6 +299,7 @@
       <set name="range">30/350</set>
       <set name="damage" type="piercing">1d12</set>
       <set name="misfire">2</set>
+      <set name="enhancement">1+intelligence:modifier</set>
     </setters>
   </element>
 
@@ -315,6 +316,7 @@
       <set name="range">15/400</set>
       <set name="damage" type="piercing">2d12</set>
       <set name="misfire">1</set>
+      <set name="enhancement">2+"intelligence:modifier"</set>
     </setters>
   </element>
 
