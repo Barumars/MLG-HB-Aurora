@@ -4,25 +4,19 @@
     <name>MLG Homebrew — Classes</name>
     <author url="https://github.com/Barumars/MLG-HB-Aurora">Barumars</author>
     <update version="1.0">
-      <file
-        name="classes.index"
-        url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/main/classes.index" />
+      <file name="classes.index"
+            url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/refs/heads/main/classes.index"/>
     </update>
   </info>
 
   <files>
-    <!-- Source dosyası -->
-    <file
-      name="source-homebrew.xml"
-      url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/main/Elements/Classes/source-homebrew.xml"
-      type="elements"
-      path="Elements/Classes/" />
-
-    <!-- Subclass dosyası -->
-    <file
-      name="artificer-arcane-sniper.xml"
-      url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/main/Elements/Classes/artificer-arcane-sniper.xml"
-      type="elements"
-      path="Elements/Classes/" />
+    <!-- Kaynak dosyası (Source) -->
+    <file name="source-homebrew.xml"
+          url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/refs/heads/main/Elements/Classes/source-homebrew.xml"
+          type="elements"/>
+    <!-- Alt sınıf -->
+    <file name="artificer-arcane-sniper.xml"
+          url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/refs/heads/main/Elements/Classes/artificer-arcane-sniper.xml"
+          type="elements"/>
   </files>
 </index>
