@@ -70,6 +70,9 @@
     <sheet>
       <description>Arcane Rifle: ignore Loading; may use INT for firearm attack &amp; damage; firearm counts as focus.</description>
     </sheet>
+        <rules>
+      <grant type="Weapon" id="ID_HB_WEAPON_ARCANE_RIFLE"/>
+      </rules>
   </element>
 
   <element name="Flow" type="Archetype Feature" source="MLG" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_FLOW">
@@ -131,6 +134,9 @@
     <sheet>
       <description>Ignore ½ cover; misfire threshold −1 (min 1).</description>
     </sheet>
+    <rules>
+      <grant type="Weapon" id="ID_HB_WEAPON_ADVANCED_ARCANE_RIFLE"/>
+    </rules>
   </element>
 
   <element name="Advanced Vision" type="Archetype Feature" source="MLG" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ADVANCED_VISION">
@@ -274,5 +280,43 @@
     <description><p>Spend 1 Flow: after a hit you can make an additional attack roll against a second creature within 15 ft. of the original target.</p></description>
     <sheet><description>Spend 1 Flow: extra attack vs creature within 15 ft. of target.</description></sheet>
   </element>
+
+
+  <!-- ============================= -->
+  <!--  WEAPONS                     -->
+  <!-- ============================= -->
+
+  <element name="Arcane Rifle" type="Weapon" source="MLG" id="ID_HB_WEAPON_ARCANE_RIFLE">
+    <supports>ID_INTERNAL_WEAPON_CATEGORY_FIREARM,ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED,ID_INTERNAL_WEAPON_PROPERTY_RANGED,ID_INTERNAL_DAMAGETYPE_PIERCING,ID_INTERNAL_WEAPON_PROPERTY_AMMUNITION,ID_INTERNAL_WEAPON_PROPERTY_TWOHANDED,ID_INTERNAL_WEAPON_PROPERTY_MISFIRE,ID_RDDT_AA_WEAPON_GROUP_FIREARMS</supports>
+    <description>
+      <p>Ammunition (range 30/350), Two-Handed, Misfire 2, Magical, Spellcasting Focus</p>
+    </description>
+    <setters>
+      <set name="category">Arcane Firearms</set>
+      <set name="cost" currency="gp">—</set>
+      <set name="weight" lb="25">25 lb.</set>
+      <set name="slot">twohand</set>
+      <set name="range">30/350</set>
+      <set name="damage" type="piercing">1d12</set>
+      <set name="misfire">2</set>
+    </setters>
+  </element>
+
+  <element name="Advanced Arcane Rifle" type="Weapon" source="MLG" id="ID_HB_WEAPON_ADVANCED_ARCANE_RIFLE">
+    <supports>ID_INTERNAL_WEAPON_CATEGORY_FIREARM,ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED,ID_INTERNAL_WEAPON_PROPERTY_RANGED,ID_INTERNAL_DAMAGETYPE_PIERCING,ID_INTERNAL_WEAPON_PROPERTY_AMMUNITION,ID_INTERNAL_WEAPON_PROPERTY_TWOHANDED,ID_INTERNAL_WEAPON_PROPERTY_MISFIRE,ID_RDDT_AA_WEAPON_GROUP_FIREARMS</supports>
+    <description>
+      <p>Ammunition (range 15/400–450), Two-Handed, Misfire 1, Magical, Spellcasting Focus</p>
+    </description>
+    <setters>
+      <set name="category">Arcane Firearms</set>
+      <set name="cost" currency="gp">—</set>
+      <set name="weight" lb="25">25 lb.</set>
+      <set name="slot">twohand</set>
+      <set name="range">15/400</set>
+      <set name="damage" type="piercing">2d12</set>
+      <set name="misfire">1</set>
+    </setters>
+  </element>
+
 
 </elements>
