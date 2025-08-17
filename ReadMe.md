@@ -3,10 +3,16 @@ Visit the [website](http://www.aurorabuilder.com "Aurora Website") for more info
 
 # MLG - D&D Homebrew Collection
 
-Welcome to my repository of custom D&D 5e homebrew content! This collection includes:
+Community-made **Homebrew** content for **Aurora Character Builder**. 
+
+This repository currently includes the **Artificer — Arcane Sniper** specialist and will grow with additional homebrew content.
 
 - 🧙‍♂️ **New Classes & Subclasses**  
 - 🧪 **Custom Spells & Magic Items**  
 - 🐉 **Monster Stat Blocks**  
 - 🌍 **Adventure Modules & Settings**  
+
+> ⚠️ **License Notice**  
+> This project uses a **Personal Use, No Redistribution (PU-NR)** license.  
+> You may **use and modify** locally (personal or internal business use), but you may **not sell** or **redistribute** the content without written permission. See `LICENSE` for details.
 
