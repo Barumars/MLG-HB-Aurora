@@ -301,7 +301,7 @@
       <set name="damage" type="piercing">1d12</set>
       <set name="misfire">2</set>
       <set name="enhancement">1</set>
-      <grant type="Proficiency" id="ID_CRIT_PROFICIENCY_WEAPON_MUSKET"/>
+      <set name="proficiency">ID_CRIT_PROFICIENCY_WEAPON_FIREARMS</set>
     </setters>
   </element>
 
@@ -319,7 +319,7 @@
       <set name="damage" type="piercing">2d12</set>
       <set name="misfire">1</set>
       <set name="enhancement">2</set>
-      <grant type="Proficiency" id="ID_CRIT_PROFICIENCY_WEAPON_MUSKET"/>
+      <set name="proficiency">ID_CRIT_PROFICIENCY_WEAPON_FIREARMS</set>
     </setters>
   </element>
 
