@@ -9,7 +9,7 @@
     </update>
   </info>
 
-  <element name="Homebrew" type="Source" source="Homebrew" id="ID_MLG_HB_SOURCE">
+  <element name="MLG" type="Source" source="MLG" id="ID_MLG_HB_SOURCE">
     <description>
       <p>Custom subclass pack containing Artificer — Arcane Sniper.</p>
     </description>
