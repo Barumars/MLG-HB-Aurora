@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+  <!-- ============================= -->
+  <!--  SOURCE                      -->
+  <!-- ============================= -->
+  <info>
+    <name>Arcane Sniper (Artificer Specialist) — Homebrew</name>
+    <update version="1.0"/>
+  </info>
+
+  <!-- ============================= -->
+  <!--  SUBCLASS (ARCHETYPE)        -->
+  <!-- ============================= -->
+  <element name="Arcane Sniper" type="Archetype" source="Homebrew" id="ID_HB_ARTIFICER_SPECIALIST_ARCANE_SNIPER">
+    <supports>Artificer Specialist</supports>
+    <description>
+      <p>The Arcane Sniper is an Artificer specialization that combines firearms with magical flow. At early levels, you create your Arcane Rifle, gain Flow points for Arcane Shots at 3rd level, and acquire tools like mechanical repairs and sniper nests. At higher levels you enhance your rifle, gain advanced sight and repair capabilities, create a mechanical companion at 15th level, and gain reaction shots against enemies in your range at 18th level.</p>
+    </description>
+    <rules>
+      <!-- 1st -->
+      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_ARCANE_RIFLE" level="1"/>
+
+      <!-- 3rd -->
+      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_FIREARM_PROFICIENCY" level="3"/>
+      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_GUNSMITH" level="3"/>
+      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_FLOW" level="3"/>
+      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_RENDING_SHOTS" level="3"/>
+      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_SNIPER_NEST" level="3"/>
+      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_ARCANE_SHOTS" level="3"/>
+
+      <!-- Arcane Shot selections -->
+      <select type="Archetype Feature" name="Arcane Shot (Arcane Sniper)" supports="Arcane Shot (Arcane Sniper)" level="3" number="2"/>
+      <select type="Archetype Feature" name="Arcane Shot (Arcane Sniper)" supports="Arcane Shot (Arcane Sniper)" level="7" number="1"/>
+      <select type="Archetype Feature" name="Arcane Shot (Arcane Sniper)" supports="Arcane Shot (Arcane Sniper)" level="10" number="1"/>
+      <select type="Archetype Feature" name="Arcane Shot (Arcane Sniper)" supports="Arcane Shot (Arcane Sniper)" level="15" number="1"/>
+      <select type="Archetype Feature" name="Arcane Shot (Arcane Sniper)" supports="Arcane Shot (Arcane Sniper)" level="18" number="1"/>
+
+      <!-- 5th -->
+      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_ADVANCED_RIFLE" level="5"/>
+
+      <!-- 7th -->
+      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_ADVANCED_VISION" level="7"/>
+
+      <!-- 10th -->
+      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_ARCANE_REPAIR" level="10"/>
+
+      <!-- 15th -->
+      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_MECHANICAL_FRIEND" level="15"/>
+
+      <!-- 18th -->
+      <grant type="Archetype Feature" id="ID_HB_ARCANE_SNIPER_FEATURE_BYRONNAS_SPECIAL_SERVICE" level="18"/>
+    </rules>
+  </element>
+
+  <!-- ============================= -->
+  <!--  FEATURES                    -->
+  <!-- ============================= -->
+
+  <!-- L1: Arcane Rifle -->
+  <element name="Arcane Rifle" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_ARCANE_RIFLE">
+    <description>
+      <p>At 1st level, you create your Arcane Rifle. This magical weapon can serve as a spellcasting focus.</p>
+    </description>
+    <sheet>
+      <description>You own an Arcane Rifle (magical, spellcasting focus). Added to inventory.</description>
+    </sheet>
+    <rules>
+      <grant type="Weapon" id="ID_HB_WEAPON_ARCANE_RIFLE"/>
+    </rules>
+  </element>
+
+  <!-- L3: Firearm Proficiency -->
+  <element name="Firearm Proficiency" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_FIREARM_PROFICIENCY">
+    <description>
+      <p>You gain proficiency with firearms.</p>
+    </description>
+    <sheet>
+      <description>Proficiency with firearms</description>
+    </sheet>
+    <rules>
+      <grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_WEAPON_CATEGORY_FIREARM"/>
+    </rules>
+  </element>
+
+  <!-- L3: Gunsmith -->
+  <element name="Gunsmith" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_GUNSMITH">
+    <description>
+      <ul>
+        <li>Gain proficiency with Tinker's tools</li>
+        <li>Can produce ammunition and repair damaged weapons (may design new weapons at DM's discretion)</li>
+        <li>Action: <i>Repair Misfire</i> (DC = 8 + weapon's misfire value)</li>
+      </ul>
+    </description>
+    <sheet action="Action">
+      <description>Tinker's tools; Repair Misfire (DC 8 + misfire)</description>
+    </sheet>
+    <rules>
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_TINKERS_TOOLS"/>
+    </rules>
+  </element>
+
+  <!-- L3: Flow (resource) -->
+  <element name="Flow" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_FLOW">
+    <description>
+      <p>Gain Flow points to fuel Arcane Shot maneuvers. As a bonus action, expend spell slots to gain temporary Flow points (equal to slot level). Lose all temporary Flow after a long rest.</p>
+      <p>Flow points equal to your Intelligence modifier (minimum 1).</p>
+    </description>
+    <sheet usage="{{flow:count}}/Long Rest" action="Bonus Action">
+      <description>Flow Point Exchange: Expend spell slot → gain temporary Flow equal to slot level (resets at LR)</description>
+    </sheet>
+    <rules>
+      <stat name="flow:count" value="1"/>
+      <stat name="flow:count" value="intelligence:modifier"/>
+    </rules>
+  </element>
+
+  <!-- L3: Rending Shots -->
+  <element name="Rending Shots" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_RENDING_SHOTS">
+    <description>
+      <p>Your ranged attacks ignore piercing damage resistance. Immunity to piercing damage counts as resistance against your attacks.</p>
+    </description>
+    <sheet>
+      <description>Ranged attacks ignore piercing resistance; immunity → resistance</description>
+    </sheet>
+  </element>
+
+  <!-- L3: Sniper Nest -->
+  <element name="Sniper Nest" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_SNIPER_NEST">
+    <description>
+      <p>Spend 10 minutes creating a temporary sniper nest. While in the nest, you gain 3/4 cover. If hidden, enemies have disadvantage to detect you after you attack targets within 30 ft.</p>
+    </description>
+    <sheet action="Bonus Action">
+      <description>Set Up the Nest (10 min): Gain 3/4 cover; hard to detect when hidden</description>
+    </sheet>
+  </element>
+
+  <!-- L3: Arcane Shots (container text) -->
+  <element name="Arcane Shots" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_ARCANE_SHOTS">
+    <description>
+      <p>Arcane Shots are special maneuvers declared before an attack that may consume Flow points. Only one Arcane Shot per attack. Saving throw DC (if applicable): 8 + Proficiency Bonus + Intelligence modifier.</p>
+      <p>Learn additional Arcane Shot options as you level up. When you gain a new option, you may replace one known option.</p>
+    </description>
+    <sheet>
+      <description>Arcane Shot: Once per attack; DC = 8 + PB + INT mod</description>
+    </sheet>
+  </element>
+
+  <!-- L5: Advanced Rifle -->
+  <element name="Advanced Rifle" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_ADVANCED_RIFLE">
+    <description>
+      <p>At 5th level, you upgrade your Arcane Rifle. The basic rifle is replaced with an Advanced Arcane Rifle.</p>
+    </description>
+    <sheet>
+      <description>Arcane Rifle → Advanced Arcane Rifle (2d12; misfire 1; focus)</description>
+    </sheet>
+    <rules>
+      <grant type="Weapon" id="ID_HB_WEAPON_ADVANCED_ARCANE_RIFLE"/>
+    </rules>
+  </element>
+
+  <!-- L7: Advanced Vision -->
+  <element name="Advanced Vision" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_ADVANCED_VISION">
+    <description>
+      <p>Starting at 7th level, you ignore disadvantage on Wisdom (Perception) checks based on sight (unless blinded). You also gain advantage on saving throws against blindness.</p>
+    </description>
+    <sheet>
+      <description>Ignore sight-based Perception disadvantage; advantage against blindness saves</description>
+    </sheet>
+  </element>
+
+  <!-- L10: Arcane Repair -->
+  <element name="Arcane Repair" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_ARCANE_REPAIR">
+    <description>
+      <p>As a bonus action, spend 1 Flow point to clear the misfire condition from a firearm that isn't broken.</p>
+    </description>
+    <sheet action="Bonus Action">
+      <description>1 Flow: Clear misfire condition (if not broken)</description>
+    </sheet>
+  </element>
+
+  <!-- L15: Mechanical Friend -->
+  <element name="Mechanical Friend" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_MECHANICAL_FRIEND">
+    <description>
+      <p>Create a mechanical companion (similar to a familiar) that accompanies you. It understands Common and one other language you know, and has truesight. You gain advantage on ranged weapon attacks against creatures targeted by your mechanical friend.</p>
+    </description>
+    <sheet>
+      <description>Mechanical companion (familiar-like, truesight). Advantage on attacks against its target</description>
+    </sheet>
+  </element>
+
+  <!-- L18: Byronna's Special Service -->
+  <element name="Byronna's Special Service" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_FEATURE_BYRONNAS_SPECIAL_SERVICE">
+    <description>
+      <p>When an enemy you can see enters or moves within your normal weapon range, you can use your reaction to make an opportunity attack with a ranged weapon.</p>
+    </description>
+    <sheet action="Reaction">
+      <description>Opportunity attack against enemies entering normal range (ranged weapon)</description>
+    </sheet>
+  </element>
+
+  <!-- ============================= -->
+  <!--  ARCANE SHOT OPTIONS         -->
+  <!-- ============================= -->
+
+  <element name="Arcane Shot: Overcharged Shot" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_AS_OVERCHARGED_SHOT">
+    <supports>Arcane Shot (Arcane Sniper)</supports>
+    <description>
+      <p>Declare this shot before a firearm attack. Expend 1-3 Flow points. For each point spent, add +1 weapon damage die to the attack. Each point spent increases the weapon's misfire value by +2 for this attack.</p>
+    </description>
+    <sheet>
+      <description>1–3 Flow: +1 weapon die/point; misfire +2/point for this attack</description>
+    </sheet>
+  </element>
+
+  <element name="Arcane Shot: Regenerating Shot" type="Archetype Feature" source="Homebrew" id="ID_HB_ARCANE_SNIPER_AS_REGENERATING_SHOT">
+    <supports>Arcane Shot (Arcane Sniper)</supports>
+    <description>
+      <p>Expend 2 Flow points to heal a creature you hit or target for 2d8 + INT modifier.</p>
+    </description>
+    <sheet>
+      <description>2 Flow: Heal 2d8 + INT modifier</description>
+    </sheet>
+  </element>
+
+  <!-- ============================= -->
+  <!--  WEAPONS                     -->
+  <!-- ============================= -->
+
+  <element name="Arcane Rifle" type="Weapon" source="Homebrew" id="ID_HB_WEAPON_ARCANE_RIFLE">
+    <supports>ID_INTERNAL_WEAPON_CATEGORY_FIREARM,ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED,ID_INTERNAL_WEAPON_PROPERTY_RANGED,ID_INTERNAL_DAMAGETYPE_PIERCING,ID_INTERNAL_WEAPON_PROPERTY_AMMUNITION,ID_INTERNAL_WEAPON_PROPERTY_TWOHANDED,ID_INTERNAL_WEAPON_PROPERTY_MISFIRE,ID_RDDT_AA_WEAPON_GROUP_FIREARMS</supports>
+    <description>
+      <p>Ammunition (range 30/350), Two-Handed, Misfire 2, Magical, Spellcasting Focus</p>
+    </description>
+    <setters>
+      <set name="category">Arcane Firearms</set>
+      <set name="cost" currency="gp">—</set>
+      <set name="weight" lb="25">25 lb.</set>
+      <set name="slot">twohand</set>
+      <set name="range">30/350</set>
+      <set name="damage" type="piercing">1d12</set>
+      <set name="misfire">2</set>
+      <set name="proficiency">ID_INTERNAL_PROFICIENCY_WEAPON_CATEGORY_FIREARM</set>
+    </setters>
+  </element>
+
+  <element name="Advanced Arcane Rifle" type="Weapon" source="Homebrew" id="ID_HB_WEAPON_ADVANCED_ARCANE_RIFLE">
+    <supports>ID_INTERNAL_WEAPON_CATEGORY_FIREARM,ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED,ID_INTERNAL_WEAPON_PROPERTY_RANGED,ID_INTERNAL_DAMAGETYPE_PIERCING,ID_INTERNAL_WEAPON_PROPERTY_AMMUNITION,ID_INTERNAL_WEAPON_PROPERTY_TWOHANDED,ID_INTERNAL_WEAPON_PROPERTY_MISFIRE,ID_RDDT_AA_WEAPON_GROUP_FIREARMS</supports>
+    <description>
+      <p>Ammunition (range 15/400–450), Two-Handed, Misfire 1, Magical, Spellcasting Focus</p>
+    </description>
+    <setters>
+      <set name="category">Arcane Firearms</set>
+      <set name="cost" currency="gp">—</set>
+      <set name="weight" lb="25">25 lb.</set>
+      <set name="slot">twohand</set>
+      <set name="range">15/400</set>
+      <set name="damage" type="piercing">2d12</set>
+      <set name="misfire">1</set>
+      <set name="proficiency">ID_INTERNAL_PROFICIENCY_WEAPON_CATEGORY_FIREARM</set>
+    </setters>
+  </element>
+</elements>

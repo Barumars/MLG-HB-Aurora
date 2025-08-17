@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+  <element name="Homebrew" type="Source" source="Homebrew" id="ID_MLG_HB_SOURCE">
+    <description>
+      <p>Custom subclass pack containing Artificer — Arcane Sniper.</p>
+    </description>
+    <setters>
+      <set name="abbreviation">HB</set>
+      <set name="author">Barumars</set>
+      <set name="url">https://github.com/Barumars/MLG-HB-Aurora</set>
+      <set name="releasedate">2025-08-17</set>
+    </setters>
+  </element>
+</elements>
