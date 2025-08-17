@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <elements>
-  <element name="Homebrew" type="Source" source="Homebrew" id="ID_MLG_HB_SOURCE">
+  <element name="source-homebrew" type="Source" source="Homebrew" id="ID_MLG_HB_SOURCE">
     <description>
       <p>Custom class and subclass pack containing Artificer — Arcane Sniper.</p>
     </description>
