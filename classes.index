@@ -7,8 +7,8 @@
 
 <!-- Index dosyasının kendi güncelleme bildirimi -->
     <update version="1.0.3" date="2025-08-17">
-      <file name="Elements/Classes/artificer-arcane-sniper.xml"
-            url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/main/Elements/Classes/artificer-arcane-sniper.xml" />
+      <file name="classes.index"
+            url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/main/classes.index"/>
     </update>
   </info>
   
@@ -19,6 +19,6 @@
 
     <!-- Alt-sınıf dosyası -->
     <file name="artificer-arcane-sniper.xml"
-          url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/main/Elements/Classes/artificer-arcane-sniper.xml" />
+          url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/main/Elements/Classes/artificer-arcane-sniper.xml"/>
   </files>
 </index>
