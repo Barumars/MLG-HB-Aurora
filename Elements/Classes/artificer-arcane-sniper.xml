@@ -65,7 +65,7 @@
       <description>You own an Arcane Rifle (magical, spellcasting focus). Added to inventory.</description>
     </sheet>
     <rules>
-      <grant type="Weapon" id="ID_HB_WEAPON_ARCANE_RIFLE"/>
+    <grant type="Proficiciency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_TINKERS_TOOLS"/>
     </rules>
   </element>
 
