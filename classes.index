@@ -16,7 +16,7 @@
   <files>
     <!-- Kaynak tanımı: sources.xml (adı ve yolunu aynen koru) -->
     <file name="source-homebrew.xml"
-          url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/main/source-homebrew.xml" />
+          url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/main/Elements/Classes/source-homebrew.xml" />
 
     <!-- Alt-sınıf dosyası -->
     <file name="artificer-arcane-sniper.xml"
