@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <elements>
-  <!-- ============================= -->
-  <!--  SOURCE                      -->
-  <!-- ============================= -->
   <info>
-    <name>Arcane Sniper (Artificer Specialist) — Homebrew</name>
-    <description>Homebrew artificer subclass focused on long-range infused firearms and arcane shots.</description>
+    <name>Artificer — Arcane Sniper (MLG)</name>
     <author url="https://github.com/Barumars/MLG-HB-Aurora">Barumars</author>
-    <update version="1.0.3" date="2025-08-17">
-      <!-- alt klasörsüz name -->
-      <file name="artificer-arcane-sniper.xml"
-            url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/main/Elements/Classes/artificer-arcane-sniper.xml"/>
+    <update version="1.0">
+      <file
+        name="artificer-arcane-sniper.xml"
+        url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/main/Elements/Classes/artificer-arcane-sniper.xml" />
     </update>
   </info>
   <!-- ============================= -->

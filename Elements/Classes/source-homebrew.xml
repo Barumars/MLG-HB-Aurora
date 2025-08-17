@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <elements>
   <info>
-    <name>MLG HB - Sources</name>
-    <description>Homebrew source entry.</description>
+    <name>Homebrew Source (MLG)</name>
     <author url="https://github.com/Barumars/MLG-HB-Aurora">Barumars</author>
-    <update version="1.0.4" date="2025-08-17">
-      <!-- KENDİ DOSYANIN RAW LİNKİ -->
-      <file name="source-homebrew.xml"
-            url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/refs/heads/main/Elements/Classes/source-homebrew.xml" />
+    <update version="1.0">
+      <file
+        name="source-homebrew.xml"
+        url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/main/Elements/Classes/source-homebrew.xml" />
     </update>
   </info>
 
-  <element name="source-homebrew" type="Source" source="Homebrew" id="ID_MLG_HB_SOURCE">
+  <element name="Homebrew" type="Source" source="Homebrew" id="ID_MLG_HB_SOURCE">
     <description>
       <p>Custom subclass pack containing Artificer — Arcane Sniper.</p>
     </description>

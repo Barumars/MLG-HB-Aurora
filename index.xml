@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <index>
   <info>
-    <name>UKL Homebrew Pack</name>
-    <update version="1.0"/>
+    <name>MLG Homebrew (Root)</name>
+    <update version="1.0" />
   </info>
 
   <files>
-    <!-- Kaynak (opsiyonel ama tavsiye edilir) -->
-    <file name="source-homebrew.xml" url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/main/Elements/Classes/source-homebrew.xml" type="elements"/>
-
-    <!-- Arcane Sniper (Artificer Specialist) -->
-    <file name="artificer-arcane-sniper.xml" url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/main/Elements/Classes/artificer-arcane-sniper.xml" type="elements"/>
+    <file
+      name="classes.index"
+      url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/main/classes.index"
+      type="index" />
   </files>
 </index>
