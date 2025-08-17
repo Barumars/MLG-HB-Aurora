@@ -7,9 +7,9 @@
 
   <files>
     <!-- Kaynak (opsiyonel ama tavsiye edilir) -->
-    <file name="Source - Homebrew" url="elements/Classes/source-homebrew.xml" type="elements"/>
+    <file name="source-homebrew.xml" url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/main/Elements/Classes/source-homebrew.xml" type="elements"/>
 
     <!-- Arcane Sniper (Artificer Specialist) -->
-    <file name="Artificer - Arcane Sniper" url="elements/Classes/artificer-arcane-sniper.xml" type="elements"/>
+    <file name="artificer-arcane-sniper.xml" url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/main/Elements/Classes/artificer-arcane-sniper.xml" type="elements"/>
   </files>
 </index>
