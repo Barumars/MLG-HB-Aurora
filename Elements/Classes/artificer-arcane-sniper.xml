@@ -5,7 +5,7 @@
   <!-- ============================= -->
   <info>
     <name>Artificer — Arcane Sniper (MLG)</name>
-    <description>Artificer Specialist focused on an Arcane Rifle and Flow-powered Arcane Shots. Rebuilt to use Aurora’s “supports + select” pattern exactly like Fighter Battle Master Maneuvers.</description>
+    <description>Artificer Specialist focused on an Arcane Rifle and Flow-powered Telum Magicaes. Rebuilt to use Aurora’s “supports + select” pattern exactly like Fighter Battle Master Maneuvers.</description>
     <author url="https://github.com/Barumars/MLG-HB-Aurora">Barumars</author>
     <update version="1.2.0" date="2025-08-17">
       <file name="artificer-arcane-sniper.xml" url="https://raw.githubusercontent.com/Barumars/MLG-HB-Aurora/main/Elements/Classes/artificer-arcane-sniper.xml"/>
@@ -15,14 +15,14 @@
   <!-- ============================= -->
   <!--   SUBCLASS TANIMI            -->
   <!-- ============================= -->
-  <element name="Arcane Sniper" type="Archetype" source="Homebrew" id="ID_MLG_HB_ARTIFICER_SPECIALIST_ARCANE_SNIPER">
+  <element name="Arcane Sniper" type="Archetype" source="MLG" id="ID_MLG_HB_ARTIFICER_SPECIALIST_ARCANE_SNIPER">
     <supports>Artificer Specialist</supports>
     <description>
-      <p>You engineer an <em>Arcane Rifle</em> and fuel devastating <em>Arcane Shots</em> with your personal reservoir, <em>Flow</em>. This file mirrors the Battle Master maneuver structure so shot selection and display work flawlessly.</p>
+      <p>You engineer an <em>Arcane Rifle</em> and fuel devastating <em>Telum Magicaes</em> with your personal reservoir, <em>Flow</em>. This file mirrors the Battle Master maneuver structure so shot selection and display work flawlessly.</p>
       <div element="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ARCANE_RIFLE"/>
       <div element="ID_MLG_HB_ARCANE_SNIPER_FEATURE_FLOW"/>
       <div element="ID_MLG_HB_ARCANE_SNIPER_FEATURE_GUNSMITH"/>
-      <div element="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ARCANE_SHOTS"/>
+      <div element="ID_MLG_HB_ARCANE_SNIPER_FEATURE_TELUM_MAGICAE"/>
       <div element="ID_MLG_HB_ARCANE_SNIPER_FEATURE_RENDING_SHOTS"/>
       <div element="ID_MLG_HB_ARCANE_SNIPER_FEATURE_SNIPER_NEST"/>
       <div element="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ADVANCED_RIFLE"/>
@@ -33,14 +33,14 @@
       <div element="ID_MLG_HB_ARCANE_SNIPER_FEATURE_HEADSHOT"/>
     </description>
     <sheet>
-      <description>Magitech marksmanship with Flow-powered Arcane Shots.</description>
+      <description>Magitech marksmanship with Flow-powered Telum Magicaes.</description>
     </sheet>
     <rules>
       <!-- 3. seviye -->
       <grant type="Archetype Feature" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ARCANE_RIFLE" level="3"/>
       <grant type="Archetype Feature" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_FLOW" level="3"/>
       <grant type="Archetype Feature" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_GUNSMITH" level="3"/>
-      <grant type="Archetype Feature" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ARCANE_SHOTS" level="3"/>
+      <grant type="Archetype Feature" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_TELUM_MAGICAE" level="3"/>
       <grant type="Archetype Feature" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_RENDING_SHOTS" level="3"/>
       <grant type="Archetype Feature" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_SNIPER_NEST" level="3"/>
 
@@ -52,18 +52,18 @@
       <grant type="Archetype Feature" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ELEMENTAL_OVERFLOW" level="15"/>
       <grant type="Archetype Feature" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_HEADSHOT" level="18"/>
 
-      <!-- Arcane Shot seçimleri — Battle Master kalıbı -->
-      <select type="Archetype Feature" name="Arcane Shot" supports="Arcane Shot" level="3" number="2"/>
-      <select type="Archetype Feature" name="Arcane Shot" supports="Arcane Shot" level="6" number="1"/>
-      <select type="Archetype Feature" name="Arcane Shot" supports="Arcane Shot" level="11" number="1"/>
-      <select type="Archetype Feature" name="Arcane Shot" supports="Arcane Shot" level="15" number="1"/>
+      <!-- Telum Magicae seçimleri — Battle Master kalıbı -->
+      <select type="Archetype Feature" name="Telum Magicae" supports="Telum Magicae" level="3" number="2"/>
+      <select type="Archetype Feature" name="Telum Magicae" supports="Telum Magicae" level="6" number="1"/>
+      <select type="Archetype Feature" name="Telum Magicae" supports="Telum Magicae" level="11" number="1"/>
+      <select type="Archetype Feature" name="Telum Magicae" supports="Telum Magicae" level="15" number="1"/>
     </rules>
   </element>
 
   <!-- ============================= -->
   <!--   ÖZELLİKLER                  -->
   <!-- ============================= -->
-  <element name="Arcane Rifle" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ARCANE_RIFLE">
+  <element name="Arcane Rifle" type="Archetype Feature" source="MLG" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ARCANE_RIFLE">
     <description>
       <p>You craft an <em>Arcane Rifle</em>. While wielding it, you ignore the Loading property of firearms and may use Intelligence instead of Dexterity for your firearm attack and damage rolls. The rifle counts as a spellcasting focus for your artificer spells.</p>
     </description>
@@ -72,23 +72,23 @@
     </sheet>
   </element>
 
-  <element name="Flow" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_FLOW">
+  <element name="Flow" type="Archetype Feature" source="MLG" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_FLOW">
     <description>
       <p>You have Flow points equal to your INT modifier (min 1). Long rest restores all Flow.</p>
-      <p class="indent"><strong>Arcane Shots.</strong> When you hit with a firearm attack, you can spend 1 Flow to apply an Arcane Shot you know. Save DC = 8 + PB + INT mod.</p>
+      <p class="indent"><strong>Telum Magicaes.</strong> When you hit with a firearm attack, you can spend 1 Flow to apply an Telum Magicae you know. Save DC = 8 + PB + INT mod.</p>
       <p class="indent"><strong>Slot Exchange.</strong> Bonus action: convert a spell slot to Flow equal to slot level (temporary Flow; lost on long rest).</p>
     </description>
     <sheet>
-      <description>Flow = INT mod (min 1), long rest. Spend 1 on hit to apply a known Arcane Shot (DC {{arcane-shot:dc}}). Bonus: convert a slot → Flow equal to slot level.</description>
+      <description>Flow = INT mod (min 1), long rest. Spend 1 on hit to apply a known Telum Magicae (DC {{telum-magicae:dc}}). Bonus: convert a slot → Flow equal to slot level.</description>
     </sheet>
     <rules>
-      <stat name="arcane-shot:dc" value="8" bonus="base"/>
-      <stat name="arcane-shot:dc" value="proficiency"/>
-      <stat name="arcane-shot:dc" value="intelligence:modifier"/>
+      <stat name="telum-magicae:dc" value="8" bonus="base"/>
+      <stat name="telum-magicae:dc" value="proficiency"/>
+      <stat name="telum-magicae:dc" value="intelligence:modifier"/>
     </rules>
   </element>
 
-  <element name="Gunsmith" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_GUNSMITH">
+  <element name="Gunsmith" type="Archetype Feature" source="MLG" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_GUNSMITH">
     <description>
       <p>You gain proficiency with firearms. As an action you can repair or clear a misfire from a firearm you hold by spending 1 Flow or 10 minutes of tinkering.</p>
     </description>
@@ -97,16 +97,16 @@
     </sheet>
   </element>
 
-  <element name="Arcane Shots" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ARCANE_SHOTS">
+  <element name="Telum Magicaes" type="Archetype Feature" source="MLG" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_TELUM_MAGICAE">
     <description>
-      <p>You learn two Arcane Shots at 3rd level and one additional at 6th, 11th, and 15th level. You can apply only one Arcane Shot to each attack.</p>
+      <p>You learn two Telum Magicaes at 3rd level and one additional at 6th, 11th, and 15th level. You can apply only one Telum Magicae to each attack.</p>
     </description>
     <sheet>
       <description>Known shots: 2 (+1 at 6/11/15). One shot per attack.</description>
     </sheet>
   </element>
 
-  <element name="Rending Shots" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_RENDING_SHOTS">
+  <element name="Rending Shots" type="Archetype Feature" source="MLG" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_RENDING_SHOTS">
     <description>
       <p>Once per turn when you spend Flow on a firearm hit, add extra damage equal to your INT modifier.</p>
     </description>
@@ -115,7 +115,7 @@
     </sheet>
   </element>
 
-  <element name="Sniper Nest" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_SNIPER_NEST">
+  <element name="Sniper Nest" type="Archetype Feature" source="MLG" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_SNIPER_NEST">
     <description>
       <p>1 minute to establish a vantage point: you gain light cover, +1 to firearm attacks, and advantage on sight-based Perception until you move.</p>
     </description>
@@ -124,7 +124,7 @@
     </sheet>
   </element>
 
-  <element name="Advanced Rifle" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ADVANCED_RIFLE">
+  <element name="Advanced Rifle" type="Archetype Feature" source="MLG" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ADVANCED_RIFLE">
     <description>
       <p>Ignore half cover with firearm attacks; reduce misfire threshold by 1 (min 1).</p>
     </description>
@@ -133,7 +133,7 @@
     </sheet>
   </element>
 
-  <element name="Advanced Vision" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ADVANCED_VISION">
+  <element name="Advanced Vision" type="Archetype Feature" source="MLG" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ADVANCED_VISION">
     <description>
       <p>Gain darkvision 60 ft. (or +60 ft. if you have it) and advantage on Perception checks to spot targets at long range with your firearm.</p>
     </description>
@@ -142,16 +142,16 @@
     </sheet>
   </element>
 
-  <element name="Suppressing Fire" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_SUPPRESSING_FIRE">
+  <element name="Suppressing Fire" type="Archetype Feature" source="MLG" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_SUPPRESSING_FIRE">
     <description>
-      <p>On a firearm hit, force a WIS save (DC {{arcane-shot:dc}}). On failure, the creature’s speed is 0 until the start of your next turn. You may apply this once per turn without spending Flow.</p>
+      <p>On a firearm hit, force a WIS save (DC {{telum-magicae:dc}}). On failure, the creature’s speed is 0 until the start of your next turn. You may apply this once per turn without spending Flow.</p>
     </description>
     <sheet>
-      <description>On hit: WIS save (DC {{arcane-shot:dc}}) or speed 0 till your next turn; once/turn free.</description>
+      <description>On hit: WIS save (DC {{telum-magicae:dc}}) or speed 0 till your next turn; once/turn free.</description>
     </sheet>
   </element>
 
-  <element name="Improved Rifle" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_IMPROVED_RIFLE">
+  <element name="Improved Rifle" type="Archetype Feature" source="MLG" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_IMPROVED_RIFLE">
     <description>
       <p>Increase your firearm’s damage die by one step (d8→d10, d10→d12). Ignore three-quarters cover with firearm attacks.</p>
     </description>
@@ -160,7 +160,7 @@
     </sheet>
   </element>
 
-  <element name="Elemental Overflow" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ELEMENTAL_OVERFLOW">
+  <element name="Elemental Overflow" type="Archetype Feature" source="MLG" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_ELEMENTAL_OVERFLOW">
     <description>
       <p>When you spend Flow on a shot, the target also takes +1d6 force damage.</p>
     </description>
@@ -169,7 +169,7 @@
     </sheet>
   </element>
 
-  <element name="Headshot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_HEADSHOT">
+  <element name="Headshot" type="Archetype Feature" source="MLG" id="ID_MLG_HB_ARCANE_SNIPER_FEATURE_HEADSHOT">
     <description>
       <p>Reaction when a creature in your firearm’s normal range makes an attack: make one firearm attack. On a hit, your target’s attack is made at disadvantage and it takes extra damage equal to your PB.</p>
     </description>
@@ -179,98 +179,98 @@
   </element>
 
   <!-- ============================= -->
-  <!--   ARCANE SHOTS (supports=Arcane Shot) -->
+  <!--   Telum MagicaeS (supports=Telum Magicae) -->
   <!-- ============================= -->
 
-  <element name="Anti-Magic Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_ANTIMAGIC">
-    <supports>Arcane Shot</supports>
+  <element name="Anti-Magic Shot" type="Archetype Feature" source="MLG" id="ID_MLG_HB_TELUM_MAGICAE_ANTIMAGIC">
+    <supports>Telum Magicae</supports>
     <description>
-      <p>Spend 1 Flow on a hit: target makes a CON save (DC {{arcane-shot:dc}}) or can’t cast spells until end of its next turn. On success, it has disadvantage on concentration checks from this hit.</p>
+      <p>Spend 1 Flow on a hit: target makes a CON save (DC {{telum-magicae:dc}}) or can’t cast spells until end of its next turn. On success, it has disadvantage on concentration checks from this hit.</p>
     </description>
     <sheet><description>On hit spend 1 Flow: CON save or no spells till end of its next turn (success: conc. disadv.).</description></sheet>
   </element>
 
-  <element name="Armor-Piercing Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_ARMOR_PIERCING">
-    <supports>Arcane Shot</supports>
+  <element name="Armor-Piercing Shot" type="Archetype Feature" source="MLG" id="ID_MLG_HB_TELUM_MAGICAE_ARMOR_PIERCING">
+    <supports>Telum Magicae</supports>
     <description><p>Spend 1 Flow on a hit to ignore the target’s resistances to this attack and treat its AC as 2 lower for the hit.</p></description>
     <sheet><description>Spend 1 Flow: ignore resistances; AC −2 for this hit.</description></sheet>
   </element>
 
-  <element name="Crippling Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_CRIPPLING">
-    <supports>Arcane Shot</supports>
+  <element name="Crippling Shot" type="Archetype Feature" source="MLG" id="ID_MLG_HB_TELUM_MAGICAE_CRIPPLING">
+    <supports>Telum Magicae</supports>
     <description><p>Spend 1 Flow: target CON save or speed −10 ft. and disadvantage on STR/DEX checks until end of its next turn.</p></description>
     <sheet><description>Spend 1 Flow: CON save or −10 ft. speed, STR/DEX checks disadv. till end of next turn.</description></sheet>
   </element>
 
-  <element name="Disabling Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_DISABLING">
-    <supports>Arcane Shot</supports>
+  <element name="Disabling Shot" type="Archetype Feature" source="MLG" id="ID_MLG_HB_TELUM_MAGICAE_DISABLING">
+    <supports>Telum Magicae</supports>
     <description><p>Spend 1 Flow: target WIS save or can’t take reactions and has disadvantage on opportunity attacks until end of its next turn.</p></description>
     <sheet><description>Spend 1 Flow: WIS save or no reactions; OA at disadvantage.</description></sheet>
   </element>
 
-  <element name="Exploding Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_EXPLODING">
-    <supports>Arcane Shot</supports>
+  <element name="Exploding Shot" type="Archetype Feature" source="MLG" id="ID_MLG_HB_TELUM_MAGICAE_EXPLODING">
+    <supports>Telum Magicae</supports>
     <description><p>Spend 1 Flow: 10-ft. burst centered on the target; DEX save or 2d6 fire damage (half on success).</p></description>
     <sheet><description>Spend 1 Flow: 10-ft. burst, DEX save; 2d6 fire (½ on success).</description></sheet>
   </element>
 
-  <element name="Flare Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_FLARE">
-    <supports>Arcane Shot</supports>
+  <element name="Flare Shot" type="Archetype Feature" source="MLG" id="ID_MLG_HB_TELUM_MAGICAE_FLARE">
+    <supports>Telum Magicae</supports>
     <description><p>Spend 1 Flow: target sheds bright light 10 ft., dim 10 ft. more and can’t benefit from invisibility until your next turn ends.</p></description>
     <sheet><description>Spend 1 Flow: reveal target (light 10/10); no invisibility benefit.</description></sheet>
   </element>
 
-  <element name="Heat Metal Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_HEAT_METAL">
-    <supports>Arcane Shot</supports>
+  <element name="Heat Metal Shot" type="Archetype Feature" source="MLG" id="ID_MLG_HB_TELUM_MAGICAE_HEAT_METAL">
+    <supports>Telum Magicae</supports>
     <description><p>Spend 1 Flow vs a metal-clad/holding target: +2d6 fire; CON save or it drops one metal item if possible.</p></description>
     <sheet><description>Spend 1 Flow: +2d6 fire; CON save or drop a held metal item.</description></sheet>
   </element>
 
-  <element name="Kill Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_KILL">
-    <supports>Arcane Shot</supports>
+  <element name="Kill Shot" type="Archetype Feature" source="MLG" id="ID_MLG_HB_TELUM_MAGICAE_KILL">
+    <supports>Telum Magicae</supports>
     <description><p>Spend 1 Flow: if the target is frightened or paralyzed, treat the hit as a critical. Otherwise add +1d6 damage of the attack’s type.</p></description>
     <sheet><description>Spend 1 Flow: vs frightened/paralyzed treat as crit; else +1d6 same damage type.</description></sheet>
   </element>
 
-  <element name="Overcharged Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_OVERCHARGED">
-    <supports>Arcane Shot</supports>
+  <element name="Overcharged Shot" type="Archetype Feature" source="MLG" id="ID_MLG_HB_TELUM_MAGICAE_OVERCHARGED">
+    <supports>Telum Magicae</supports>
     <description><p>Spend 1 Flow <em>before</em> the roll to attack with advantage; if both dice would hit, deal +1d6 force.</p></description>
     <sheet><description>Spend 1 Flow pre-roll: advantage; if both hit, +1d6 force.</description></sheet>
   </element>
 
-  <element name="Regenerating Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_REGENERATING">
-    <supports>Arcane Shot</supports>
+  <element name="Regenerating Shot" type="Archetype Feature" source="MLG" id="ID_MLG_HB_TELUM_MAGICAE_REGENERATING">
+    <supports>Telum Magicae</supports>
     <description><p>Spend 1 Flow: you or an ally within 30 ft. gains temp HP = INT mod + PB.</p></description>
     <sheet><description>Spend 1 Flow: temp HP (you/ally within 30 ft.) = INT mod + PB.</description></sheet>
   </element>
 
   <!-- Ek seçenekler: JS varyantlarını kapsamak için -->
-  <element name="Concussive Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_CONCUSSIVE">
-    <supports>Arcane Shot</supports>
+  <element name="Concussive Shot" type="Archetype Feature" source="MLG" id="ID_MLG_HB_TELUM_MAGICAE_CONCUSSIVE">
+    <supports>Telum Magicae</supports>
     <description><p>Spend 1 Flow: target CON save or is stunned until the start of your next turn.</p></description>
     <sheet><description>Spend 1 Flow: CON save or stunned till your next turn.</description></sheet>
   </element>
 
-  <element name="Frost Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_FROST">
-    <supports>Arcane Shot</supports>
+  <element name="Frost Shot" type="Archetype Feature" source="MLG" id="ID_MLG_HB_TELUM_MAGICAE_FROST">
+    <supports>Telum Magicae</supports>
     <description><p>Spend 1 Flow: +1d6 cold; target DEX save or speed becomes 0 until end of its next turn.</p></description>
     <sheet><description>Spend 1 Flow: +1d6 cold; DEX save or speed 0 till end of next turn.</description></sheet>
   </element>
 
-  <element name="Toxic Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_TOXIC">
-    <supports>Arcane Shot</supports>
+  <element name="Toxic Shot" type="Archetype Feature" source="MLG" id="ID_MLG_HB_TELUM_MAGICAE_TOXIC">
+    <supports>Telum Magicae</supports>
     <description><p>Spend 1 Flow: target CON save or is poisoned until the end of its next turn; on success it takes +1d6 poison only.</p></description>
     <sheet><description>Spend 1 Flow: CON save or poisoned (EoNT); success: +1d6 poison.</description></sheet>
   </element>
 
-  <element name="Piercing Line Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_PIERCING_LINE">
-    <supports>Arcane Shot</supports>
+  <element name="Piercing Line Shot" type="Archetype Feature" source="MLG" id="ID_MLG_HB_TELUM_MAGICAE_PIERCING_LINE">
+    <supports>Telum Magicae</supports>
     <description><p>Spend 1 Flow: the bullet continues in a 30-ft. line beyond the target; creatures in the line make a DEX save or take the attack’s damage (half on success).</p></description>
     <sheet><description>Spend 1 Flow: 30-ft. line beyond target; DEX save or take damage (½ on success).</description></sheet>
   </element>
 
-  <element name="Ricochet Shot" type="Archetype Feature" source="Homebrew" id="ID_MLG_HB_ARCANE_SHOT_RICOCHET">
-    <supports>Arcane Shot</supports>
+  <element name="Ricochet Shot" type="Archetype Feature" source="MLG" id="ID_MLG_HB_TELUM_MAGICAE_RICOCHET">
+    <supports>Telum Magicae</supports>
     <description><p>Spend 1 Flow: after a hit you can make an additional attack roll against a second creature within 15 ft. of the original target.</p></description>
     <sheet><description>Spend 1 Flow: extra attack vs creature within 15 ft. of target.</description></sheet>
   </element>
