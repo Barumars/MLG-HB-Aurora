@@ -70,7 +70,7 @@
     <sheet>
       <description>Arcane Rifle: ignore Loading; may use INT for firearm attack &amp; damage; firearm counts as focus.</description>
     </sheet>
-        <rules>
+      <rules>
       <grant type="Weapon" id="ID_HB_WEAPON_ARCANE_RIFLE"/>
       <grant type="Proficiency" id="ID_CRIT_PROFICIENCY_WEAPON_FIREARMS"/>
       </rules>
