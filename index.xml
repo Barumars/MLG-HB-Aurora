@@ -7,9 +7,9 @@
 
   <files>
     <!-- Kaynak (opsiyonel ama tavsiye edilir) -->
-    <file name="Source - Homebrew" url="elements/Classes/source-homebrew.xml" type="Classes"/>
+    <file name="Source - Homebrew" url="elements/Classes/source-homebrew.xml" type="elements"/>
 
     <!-- Arcane Sniper (Artificer Specialist) -->
-    <file name="Artificer - Arcane Sniper" url="elements/Classes/artificer-arcane-sniper.xml" type="Classes"/>
+    <file name="Artificer - Arcane Sniper" url="elements/Classes/artificer-arcane-sniper.xml" type="elements"/>
   </files>
 </index>
