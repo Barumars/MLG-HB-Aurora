@@ -65,7 +65,7 @@
       <description>You own an Arcane Rifle (magical, spellcasting focus). Added to inventory.</description>
     </sheet>
     <rules>
-    <grant type="Proficiency" id="ID_CRIT_PROFICIENCY_WEAPON_FIREARMS"/>
+      <grant type="Weapon" id="ID_HB_WEAPON_ARCANE_RIFLE"/>
     </rules>
   </element>
 
@@ -78,7 +78,7 @@
       <description>Proficiency with firearms</description>
     </sheet>
     <rules>
-      <grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_WEAPON_CATEGORY_FIREARM"/>
+      <grant type="Proficiency" id="ID_CRIT_PROFICIENCY_WEAPON_FIREARMS"/>
     </rules>
   </element>
 
@@ -259,4 +259,5 @@
       <set name="proficiency">ID_INTERNAL_PROFICIENCY_WEAPON_CATEGORY_FIREARM</set>
     </setters>
   </element>
+
 </elements>
